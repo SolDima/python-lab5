@@ -1,5 +1,7 @@
+# Написав Дмитро Соловйов
 students_group = {}
 
+# Написав Дмитро Соловйов і модифікував Яценко Іван
 # Функція для додавання студента з унікальним ID
 def add_student_with_id(group_number, student_id, full_name, course, subjects_grades):
     # Якщо група ще не існує, створюємо її
@@ -12,11 +14,12 @@ def add_student_with_id(group_number, student_id, full_name, course, subjects_gr
         'Курс': course,
         'Предмети та оцінки': subjects_grades
     }
-    
+   
     # Додаємо студента за унікальним ідентифікатором (ID)
     students_group[group_number][student_id] = student_info
     print(f"Студента {full_name} додано до групи {group_number} з ID {student_id}")
-
+    
+# Написав Яценко Іван
 # Функція для редагування оцінок студента
 def edit_grades(group_number, student_id, new_grades):
     if group_number in students_group and student_id in students_group[group_number]:
@@ -25,6 +28,7 @@ def edit_grades(group_number, student_id, new_grades):
     else:
         print(f"Студента з ID {student_id} у групі {group_number} не знайдено")
 
+# Написав Дмитро Соловйов і модифікував Яценко Іван
 # Функція для виведення інформації про студентів
 def display_students():
     for group, students in students_group.items():
@@ -67,17 +71,20 @@ def find_students_by_course(course_number):
     if not found:
         print(f"Не знайдено студентів на курсі {course_number}.")
 
+# Написав Дмитро Соловйов і модифікував Яценко Іван
 # Додавання студентів з використанням унікального ID
 add_student_with_id('401', 1, 'Іванов Юрій Сергійович', 2, {'Математика': 85, 'Фізика': 90, 'Програмування': 95})
 add_student_with_id('401', 2, 'Порощенко Петро Петрович', 2, {'Математика': 75, 'Фізика': 80, 'Програмування': 88})
 add_student_with_id('402', 3, 'Яценко Іван Олександрович', 3, {'Математика': 78, 'Фізика': 83, 'Програмування': 85})
 
+# Написав Яценко Іван
 # Оновлення оцінок для студента з ID 1
 edit_grades('401', 1, {'Математика': 90, 'Фізика': 92, 'Програмування': 97})
 
 # Сортування студентів у групі 401 за середнім балом
 sort_students_by_average_grade('401')
 
+# Написав Дмитро Соловйов
 # Виведення інформації про студентів
 display_students()
 
